@@ -2,18 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import {UsuariosService} from '../../utils/services/usuarios.service';
 
 @Component({
-  selector: 'app-usuarios',
+  selector: 'app-usuarios-editar',
   standalone: false,
-  templateUrl: './usuarios.component.html',
-  styleUrl: './usuarios.component.scss'
+  templateUrl: './usuarios-editar.component.html',
+  styleUrl: './usuarios-editar.component.scss'
 })
-export class UsuariosComponent implements OnInit {
-
+export class UsuariosEditarComponent implements OnInit {
   constructor(private readonly _usuariosService: UsuariosService) {
   }
-
   ngOnInit(): void {
-    this._usuariosService.listarUsuarios().subscribe({
+    this._usuariosService.getUsuario(1).subscribe({
       next: data => {
         console.log('========= DADOS DA REQUISICAO: ', data);
       },

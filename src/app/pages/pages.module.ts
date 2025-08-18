@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosEditarComponent } from './usuarios-editar/usuarios-editar.component';
 
 
 @NgModule({
   declarations: [
-    UsuariosComponent
+    UsuariosComponent,
+    UsuariosEditarComponent
   ],
   imports: [
     CommonModule,
