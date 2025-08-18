@@ -1,2 +1,17 @@
-<p>base works!</p>
-<router-outlet />
+<mat-sidenav-container class="app-container">
+  <mat-sidenav-content class="app-content">
+    <header class="app-header">
+      <mat-toolbar color="primary">
+        <span>My Application</span>
+      </mat-toolbar>
+    </header>
+    <main class="app-main">
+      <router-outlet/>
+    </main>
+    <footer class="app-footer">
+      <mat-toolbar color="primary" role="contentinfo">
+        <span>Rodapé</span>
+      </mat-toolbar>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

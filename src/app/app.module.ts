@@ -7,6 +7,11 @@ import {registerLocaleData} from '@angular/common';
 import { BaseComponent } from './layout/base/base.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptor} from './utils/interceptors/http.interceptor';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule, MatIconButton} from '@angular/material/button';
+import {MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 
 registerLocaleData(localePt);
 
@@ -17,8 +22,14 @@ registerLocaleData(localePt);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavContainer,
+    MatSidenavContent,
   ],
   providers: [
     {

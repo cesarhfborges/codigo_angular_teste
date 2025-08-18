@@ -9,6 +9,8 @@ import {UsuariosService} from '../../utils/services/usuarios.service';
 })
 export class UsuariosComponent implements OnInit {
 
+  nome: number[] = Array.from({length: 150}).map((_, i) => i);
+
   constructor(private readonly _usuariosService: UsuariosService) {
   }
 
