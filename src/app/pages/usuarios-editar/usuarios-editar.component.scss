@@ -1,0 +1,16 @@
+.flex-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}

@@ -8,10 +8,9 @@ import {BaseComponent} from './layout/base/base.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptor} from './utils/interceptors/http.interceptor';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
+import {MatToolbar} from '@angular/material/toolbar';
+import { BlockCharsDirective } from './shared/directives/block-chars.directive';
 
 registerLocaleData(localePt);
 
@@ -25,11 +24,9 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     MatSidenavContainer,
     MatSidenavContent,
+    MatToolbar,
   ],
   providers: [
     {

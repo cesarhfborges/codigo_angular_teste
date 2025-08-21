@@ -1,1 +1,28 @@
-<p>usuarios-editar works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="flex-form">
+    <mat-form-field class="form-group">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>Nome de usuário</mat-label>
+      <input matInput formControlName="username" [appBlockChars]="[' ', '*']">
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <div class="btns">
+      <button type="reset">Limpar</button>
+      <button type="submit">Enviar</button>
+    </div>
+  </div>
+</form>
+<pre>
+  <code>
+    {{form.value|json}}
+  </code>
+</pre>
